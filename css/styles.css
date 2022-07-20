@@ -26,7 +26,7 @@
 /* цвет фона иконки подвала rgb(255, 255, 255, 0.1);  */
 /* цвет фона плейсхолдера модального окна rgba(117, 117, 117, 0.5) */
 :root {
-/* fonts */
+  /* fonts */
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
 
@@ -51,7 +51,7 @@
   --overlay-modal-bg-color: rgba(0, 0, 0, 0.2);
   --portfolio-bg-image: rgba(33, 150, 243, 0.9);
   --button-bg-color: #188ce8;
-   --icon-bg-color: rgb(255, 255, 255, 0.1);
+  --icon-bg-color: rgb(255, 255, 255, 0.1);
 
   /* borger color */
   --border-color: #eeeeee;
@@ -61,8 +61,6 @@
   --border-btn-close: rgba(0, 0, 0, 0.1);
   --border-input-footer: rgba(255, 255, 255, 0.3);
   --boder-input-modal: rgba(33, 33, 33, 0.2);
-
-  
 
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-duration: 250ms;
@@ -75,7 +73,6 @@ body {
   font-family: var(--main-font);
 }
 
-
 /* reset styles */
 .list {
   display: flex;
@@ -87,7 +84,7 @@ body {
   list-style: none;
 }
 
-.link{
+.link {
   outline: none;
   text-decoration: none;
 }
@@ -110,7 +107,6 @@ img {
   padding-bottom: 94px;
 }
 
-
 .container {
   width: 1200px;
   margin-left: auto;
@@ -129,7 +125,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -150,7 +145,7 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  text-decoration: none;
+
   letter-spacing: 0.03em;
 }
 
@@ -163,24 +158,24 @@ img {
   border-bottom: 1px solid var(--border-header-color);
 }
 
-.header .container, 
-.site-nav-list,
-.contacts.list {
+.header__container,
+.header__list,
+.header__contacts-list {
   display: flex;
   align-items: center;
 }
 
-.site-nav {
+.header__nav {
   margin-left: 93px;
 }
 
-.site-nav-list .item {
+.header__item {
   margin-right: 50px;
 }
-.site-nav-list .item:last-child {
+.header__item:last-child {
   margin-right: 0;
 }
-.site-nav-list .link {
+.header__link {
   transition: color var(--transition-duration) var(--transition-timing-function);
 
   display: block;
@@ -192,14 +187,13 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
-.link.current {
+.header__link--current {
   position: relative;
   display: block;
 }
-.link.current::after {
+.header__link--current::after {
   content: '';
 
   position: absolute;
@@ -214,48 +208,34 @@ img {
   border-radius: 2px;
 }
 
-.site-nav-list .link:focus,
-.site-nav-list .link:hover,
-.link.current {
+.header__link:focus,
+.header__link:hover,
+.header__link--current {
   color: var(--accent-color);
 }
 
-.contacts.list {
+.header__contacts-list {
   margin-left: auto;
 }
 
-.contacts .item {
+.header__element {
   display: flex;
   padding: 0px;
 }
 
-.contacts .item + .item {
+.header__element + .header__element {
   margin-left: 50px;
 }
 
-.contacts .link {
-  transition: color var(--transition-duration) var(--transition-timing-function),
-    
-
+.header__link--color {
   display: inline-flex;
   align-items: center;
   margin: 0px;
 
   color: var(--primary-text-color);
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--accent-color);
-}
-
-.contacts .icon {
+.header__icon {
   fill: currentColor;
   margin-right: 10px;
 }
@@ -428,8 +408,6 @@ img {
   margin-bottom: 20px;
 }
 
-
-
 .checkbox {
   -wekit-appearance: none;
   -moz-appearance: none;
@@ -439,16 +417,14 @@ img {
   outline: var(--title-text-color);
 }
 
-.checkbox-label
-{
+.checkbox-label {
   display: flex;
   align-items: center;
   justify-content: center;
-   font-weight: 400;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
- 
 }
 
 .checkbox-link {
@@ -457,7 +433,7 @@ img {
 }
 .checkbox-label::after {
   content: '';
-  }
+}
 
 .checkbox-icon {
   display: block;
@@ -465,11 +441,10 @@ img {
   background-color: var(--primary-white-color);
   border: 1px solid var(--title-text-color);
   transition: background-color var(--transition-duration) var(--transition-timing-function),
-    border var(--transition-duration) var(--transition-timing-function),
-    
+    border var(--transition-duration) var(--transition-timing-function);
 }
 
-.checkbox:checked + .checkbox-icon{
+.checkbox:checked + .checkbox-icon {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -478,8 +453,6 @@ img {
 .checkbox-icon:hover {
   border: 1px solid var(--accent-color);
 }
-
-
 
 /* section  feature*/
 
@@ -514,7 +487,6 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-
 
 /* section work */
 .section.work {
@@ -622,9 +594,8 @@ img {
   background-color: var(--accent-color);
 }
 
-
 /* section client */
- 
+
 .client .item {
   width: 170px;
   height: 92px;
@@ -661,7 +632,7 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-bg-color);
-} 
+}
 
 .footer .container {
   display: flex;
@@ -689,7 +660,6 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function);
   display: block;
   color: var(--accent-white-color);
-  
 }
 
 .address .link:hover,
@@ -834,11 +804,10 @@ img {
   margin-left: 12px;
 }
 
-
 /* portfolio */
 
 .buttons.list {
-   margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .buttons .item {
@@ -848,7 +817,6 @@ img {
 .buttons .item:last-child {
   margin-right: 0px;
 }
-
 
 .projects .item {
   width: 370px;
