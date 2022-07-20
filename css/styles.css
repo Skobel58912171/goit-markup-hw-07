@@ -26,12 +26,22 @@
 /* цвет фона иконки подвала rgb(255, 255, 255, 0.1);  */
 /* цвет фона плейсхолдера модального окна rgba(117, 117, 117, 0.5) */
 :root {
+/* fonts */
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* color text and icon */
+
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --accent-white-color: rgba(255, 255, 255, 0.6);
   --primary-white-color: #ffffff;
   --color-placeholder-modal: rgba(117, 117, 117, 0.5);
+  --logo-text-color: #000000;
+  --icon-color: #afb1b8;
+
+  /* bg color */
 
   --bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
@@ -40,9 +50,10 @@
   --work-bg-image: rgba(47, 48, 58, 0.8);
   --overlay-modal-bg-color: rgba(0, 0, 0, 0.2);
   --portfolio-bg-image: rgba(33, 150, 243, 0.9);
-  --logo-text-color: #000000;
-
   --button-bg-color: #188ce8;
+   --icon-bg-color: rgb(255, 255, 255, 0.1);
+
+  /* borger color */
   --border-color: #eeeeee;
   --border-header-color: #ececec;
   --border-client-color: rgba(175, 177, 184, 1);
@@ -51,8 +62,7 @@
   --border-input-footer: rgba(255, 255, 255, 0.3);
   --boder-input-modal: rgba(33, 33, 33, 0.2);
 
-  --icon-bg-color: rgb(255, 255, 255, 0.1);
-  --icon-color: #afb1b8;
+  
 
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-duration: 250ms;
@@ -62,21 +72,24 @@ body {
   margin: 0;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--main-font);
 }
 
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
+/* reset styles */
 .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.link{
+  outline: none;
+  text-decoration: none;
 }
 
 h1,
@@ -89,6 +102,34 @@ p {
 img {
   display: block;
 }
+
+/* base styles */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 
 .visually-hidden {
   position: absolute;
@@ -105,7 +146,7 @@ img {
 /* header */
 .logo {
   color: var(--logo-text-color);
-  font-family: 'Raleway';
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -121,25 +162,25 @@ img {
 .header {
   border-bottom: 1px solid var(--border-header-color);
 }
-.container.nav .site-nav,
-.container.nav {
+
+.header .container, 
+.site-nav-list,
+.contacts.list {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.site-nav {
   margin-left: 93px;
 }
-.site-nav {
-  display: flex;
-}
-.site-nav .item {
+
+.site-nav-list .item {
   margin-right: 50px;
 }
-.site-nav .item:last-child {
+.site-nav-list .item:last-child {
   margin-right: 0;
 }
-.site-nav .link {
+.site-nav-list .link {
   transition: color var(--transition-duration) var(--transition-timing-function);
 
   display: block;
@@ -173,15 +214,13 @@ img {
   border-radius: 2px;
 }
 
-.site-nav .link:focus,
-.site-nav .link:hover,
+.site-nav-list .link:focus,
+.site-nav-list .link:hover,
 .link.current {
   color: var(--accent-color);
 }
 
 .contacts.list {
-  display: flex;
-  align-items: center;
   margin-left: auto;
 }
 
@@ -442,31 +481,12 @@ img {
 
 
 
-/* section */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+/* section  feature*/
+
+.feature .item {
+  width: 270px;
+  margin-right: 30px;
 }
-
-.section-title {
-  margin-bottom: 50px;
-
-  color: var(--title-text-color);
-
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.feature.list,
-.work.list,
-.team.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .container-feature {
   display: flex;
   justify-content: center;
@@ -477,11 +497,26 @@ img {
   border-radius: 4px;
 }
 
-.feature .item {
-  width: 270px;
-  margin-right: 30px;
+.feature .title {
+  margin-bottom: 10px;
+
+  color: var(--title-text-color);
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
+.feature .text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+
+/* section work */
 .section.work {
   padding-top: 0;
 }
@@ -512,24 +547,8 @@ img {
   height: 70px;
   background-color: var(--work-bg-image);
 }
-.feature .title {
-  margin-bottom: 10px;
 
-  color: var(--title-text-color);
-
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.feature .text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
+/* section team */
 .section.team {
   background-color: var(--bg-color);
 }
@@ -547,6 +566,7 @@ img {
 
   text-align: center;
 }
+
 .team .title {
   margin-bottom: 10px;
 
@@ -566,10 +586,6 @@ img {
 }
 
 .social.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
   margin-top: 16px;
 }
 .social .item {
@@ -608,13 +624,7 @@ img {
 
 
 /* section client */
-.client .list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-}
-
+ 
 .client .item {
   width: 170px;
   height: 92px;
@@ -645,17 +655,18 @@ img {
   border: 1px solid var(--border-client-current-color);
 }
 
-/* address*/
-.footer .container {
-  display: flex;
-  justify-content: start;
-  align-items: baseline;
-}
+/* footer*/
 
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-bg-color);
+} 
+
+.footer .container {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
 }
 
 .address {
@@ -678,7 +689,7 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function);
   display: block;
   color: var(--accent-white-color);
-  text-decoration: none;
+  
 }
 
 .address .link:hover,
@@ -715,6 +726,7 @@ img {
   background-color: var(--icon-bg-color);
   fill: var(--primary-white-color);
 }
+
 .container-social .icon:hover,
 .container-social .icon:focus {
   background-color: var(--accent-color);
@@ -826,9 +838,7 @@ img {
 /* portfolio */
 
 .buttons.list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+   margin-bottom: 50px;
 }
 
 .buttons .item {
@@ -838,10 +848,7 @@ img {
 .buttons .item:last-child {
   margin-right: 0px;
 }
-.projects.list {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .projects .item {
   width: 370px;
@@ -874,7 +881,7 @@ img {
 
 .projects .text {
   color: var(--primary-text-color);
-  font-family: 'Roboto';
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
