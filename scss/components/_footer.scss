@@ -1,0 +1,43 @@
+/* footer*/
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footerBgColor;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+
+.footer__logo {
+  color: $primaryWhiteColor;
+  margin-bottom: 20px;
+}
+
+.footer__socials {
+  margin-left: 70px;
+  justify-content: left;
+}
+
+.footer__item {
+  background-color: $footerBgColor;
+}
+
+.footer__link {
+  transition: background-color $ransitionDuration $transitionTimFunc;
+  background-color: $iconBgColor;
+  color: $primaryWhiteColor;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.footer__form {
+  margin-left: auto;
+  margin-bottom: 20px;
+}
