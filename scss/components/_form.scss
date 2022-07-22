@@ -1,11 +1,12 @@
 // footer form
 .form {
   display: flex;
+  margin-top: 20px;
 }
 
 .form__input {
   width: 358px;
-  margin: 0;
+
   padding: 15px 16px;
   background-color: $footerBgColor;
   border: 1px solid $borderInputFooter;
@@ -27,6 +28,7 @@
   align-items: center;
   margin-left: 12px;
 }
+
 .form__icon {
   margin-left: 10px;
 }

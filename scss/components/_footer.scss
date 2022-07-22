@@ -13,13 +13,19 @@
 }
 
 .footer__logo {
+  display: inline-block;
   color: $primaryWhiteColor;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
-.footer__socials {
+.footer__thumb {
   margin-left: 70px;
   justify-content: left;
+}
+
+footer__list {
+  margin: 0;
 }
 
 .footer__item {
@@ -27,14 +33,8 @@
 }
 
 .footer__link {
-  transition: background-color $ransitionDuration $transitionTimFunc;
   background-color: $iconBgColor;
   color: $primaryWhiteColor;
-
-  &:hover,
-  &:focus {
-    background-color: $accentColor;
-  }
 }
 
 .footer__form {

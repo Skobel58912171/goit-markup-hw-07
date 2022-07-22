@@ -1,6 +1,6 @@
 // address footer
 .address {
-  color: primaryWhiteColor;
+  color: $primaryWhiteColor;
 
   font-style: normal;
   font-weight: 400;
@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    color: accentColor;
+    color: $accentColor;
   }
 }
 

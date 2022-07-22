@@ -6,8 +6,8 @@
 }
 
 .client__link {
-  transition: color $transitionDuration $transitionTimFun,
-    border $transitionDuration $transitionTimFun;
+  transition: color $transitionDuration $transitionTimFunc,
+    border $transitionDuration $transitionTimFunc;
 
   display: flex;
   justify-content: center;
