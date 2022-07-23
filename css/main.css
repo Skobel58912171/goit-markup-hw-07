@@ -132,6 +132,11 @@ img {
           align-items: center;
   margin: 0px;
   color: #757575;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 .header__link:focus, .header__link:hover {
   color: #2196f3;
@@ -727,9 +732,9 @@ img {
 
 .projects__content {
   padding: 20px 24px;
-  border-left: 1px solid borderColor;
-  border-right: 1px solid borderColor;
-  border-bottom: 1px solid borderColor;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .projects__title {

@@ -56,9 +56,9 @@
 
 .projects__content {
   padding: 20px 24px;
-  border-left: 1px solid borderColor;
-  border-right: 1px solid borderColor;
-  border-bottom: 1px solid borderColor;
+  border-left: 1px solid $borderColor;
+  border-right: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
 }
 .projects__title {
   margin-top: 0;
